@@ -184,6 +184,7 @@ python -m unittest discover -s tests
 - `docs/scenario_audit.md`: latest known scenario-run results.
 - `CONTRIBUTING.md`: local development workflow.
 - `NOTICE.md`: thesis citation and third-party attribution.
+- `THIRD_PARTY_NOTICES.md`: third-party license notices.
 
 ## Attribution
 
@@ -193,14 +194,16 @@ https://github.com/atsushisakai/pythonrobotics
 
 ## License
 
-No standalone repository license has been selected yet. Before publishing as an open-source project, add a `LICENSE` file that matches the intended reuse permissions and is compatible with the third-party code noted in `NOTICE.md`.
+This repository is released under the MIT License. See `LICENSE`.
+
+Third-party notices for PythonRobotics-derived components are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Citation
 
 ```bibtex
 @mastersthesis{master-thesis,
   author  = {Daniel Maksimovski},
-  title   = {{Behavior Adaptive Motion Planning for Automated Driving}},
+  title   = {{Behavior-Adaptive Motion Planning for Automated Driving}},
   school  = {Technische Hochschule Ingolstadt, Ingolstadt, Germany},
   type    = {Master's Thesis},
   year    = {2020}

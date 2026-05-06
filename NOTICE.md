@@ -16,4 +16,7 @@ Several motion-planning algorithm implementations, including Hybrid A*, RRT, and
 
 https://github.com/atsushisakai/pythonrobotics
 
+PythonRobotics is released under the MIT License. See `THIRD_PARTY_NOTICES.md`
+for the original third-party license notice.
+
 The thesis itself is not currently published online.
