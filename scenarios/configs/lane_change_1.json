@@ -1,0 +1,7 @@
+{
+  "name": "lane_change_close_obstacle",
+  "goal_x": 5.0,
+  "lead_start_x": 9.0,
+  "lead_initial_speed": 0.1,
+  "lead_target_speed_kmh": 0.1
+}

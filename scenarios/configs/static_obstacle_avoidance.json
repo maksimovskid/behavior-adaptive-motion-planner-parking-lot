@@ -1,0 +1,17 @@
+{
+  "name": "static_obstacle_avoidance",
+  "goal_x": 17.0,
+  "lead_start_x": 24.0,
+  "lead_initial_speed": 0.0,
+  "lead_target_speed_kmh": 0.0,
+  "ego_target_speed_kmh": 8.0,
+  "obstacle_label": "static obstacle",
+  "add_stopped_vehicle_to_rrt": true,
+  "behavior": {
+    "safety_distance": 16.0,
+    "rrt_target_index_offset": 220,
+    "rrt_return_target_index_offset": 170,
+    "rrt_max_iter": 10,
+    "return_lane_change_min_x": 30.0
+  }
+}

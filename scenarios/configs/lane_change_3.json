@@ -1,0 +1,7 @@
+{
+  "name": "lane_change_extended_goal",
+  "goal_x": 17.0,
+  "lead_start_x": 9.0,
+  "lead_initial_speed": 3.61,
+  "lead_target_speed_kmh": 2.5
+}

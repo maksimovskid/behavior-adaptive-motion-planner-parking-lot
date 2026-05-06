@@ -1,0 +1,12 @@
+{
+  "ego_start": [1.5, 8.0, 0.0],
+  "ego_goal": [27.0, 32.0, 180.0],
+  "lead_start": [9.0, 8.0, 0.0],
+  "lead_goal": [0.0, 32.0, 180.0],
+  "ego_target_speed_kmh": 15.0,
+  "lead_target_speed_kmh": 13.0,
+  "lead_initial_speed": 3.61,
+  "obstacle_options": {
+    "exit_open": true
+  }
+}

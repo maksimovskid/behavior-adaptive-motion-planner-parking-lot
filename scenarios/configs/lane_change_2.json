@@ -1,0 +1,7 @@
+{
+  "name": "lane_change_delayed_obstacle",
+  "goal_x": 5.0,
+  "lead_start_x": 15.0,
+  "lead_initial_speed": 2.0,
+  "lead_target_speed_kmh": 6.2
+}
