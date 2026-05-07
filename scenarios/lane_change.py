@@ -92,7 +92,7 @@ def draw_live_frame(
     plot_car(state.x, state.y, state.yaw, color="b")
     plot_car(state2.x, state2.y, state2.yaw, color="r")
     plt.axis("equal")
-    plt.grid(True)
+    plt.grid(False)
     plt.xlabel("x [m]")
     plt.ylabel("y [m]")
     plt.title(f"t = {time:.1f} s, ego: {state.v * 3.6:.1f} km/h, {obstacle_label}: {state2.v * 3.6:.1f} km/h")

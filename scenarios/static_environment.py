@@ -59,7 +59,7 @@ def closed_loop_prediction(cx, cy, cyaw, ck, speed_profile, goal, target_speed):
             plot_car(state.x, state.y, state.yaw, color="b")
             plt.plot(cx[target_ind], cy[target_ind], "xg", label="target")
             plt.axis("equal")
-            plt.grid(True)
+            plt.grid(False)
             plt.title(f"t = {time:.1f} s, speed: {state.v * 3.6:.1f} km/h, target index: {target_ind}")
             plt.pause(0.0001)
 

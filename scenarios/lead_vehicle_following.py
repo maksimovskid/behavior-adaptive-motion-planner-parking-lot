@@ -166,7 +166,7 @@ def closed_loop_prediction(
             plt.plot(ego_path.x[target_ind], ego_path.y[target_ind], "xg", label="ego target")
             plt.plot(lead_path.x[target_ind2], lead_path.y[target_ind2], "xr", label="lead target")
             plt.axis("equal")
-            plt.grid(True)
+            plt.grid(False)
             plt.xlabel("x [m]")
             plt.ylabel("y [m]")
             plt.title(f"t = {time:.1f} s, ego {state.v * 3.6:.1f} km/h, lead {state2.v * 3.6:.1f} km/h")

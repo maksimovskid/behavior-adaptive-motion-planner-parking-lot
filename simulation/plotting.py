@@ -194,11 +194,11 @@ def _plot_parking_spaces(spaces: Iterable[ParkingSpace], *, target_space: Parkin
 
 
 def _format_parking_axes() -> None:
-    """Apply consistent axis limits, aspect ratio, and grid styling."""
+    """Apply consistent axis limits and aspect ratio."""
     plt.xlim(-1, 43)
     plt.ylim(-1, 42)
     plt.gca().set_aspect("equal", adjustable="box")
-    plt.grid(True, color="#e5e7eb", linewidth=0.6)
+    plt.grid(False)
 
 
 def plot_parking_lot_layout(
@@ -254,7 +254,7 @@ def plot_speed_profile(
         plt.plot(secondary_time, [value * 3.6 for value in secondary_velocity], "-b", label=secondary_label)
     plt.xlabel("Time [s]")
     plt.ylabel("Speed [km/h]")
-    plt.grid(True)
+    plt.grid(False)
     plt.legend()
 
 
