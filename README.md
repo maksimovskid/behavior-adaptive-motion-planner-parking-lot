@@ -1,6 +1,6 @@
 # Behavior-Adaptive Motion Planner for Parking Lots
 
-This repository contains the Python implementation used for Daniel Maksimovski's master's thesis, **Behavior-Adaptive Motion Planning for Automated Driving**.
+This repository contains the Python implementation used for Daniel Maksimovski's master's thesis, **Behavior Adaptive Motion Planning for Automated Driving**.
 
 The project simulates an automated vehicle driving through a structured parking lot. The ego vehicle plans a global path, adapts its speed around a lead vehicle, and performs local RRT Reeds-Shepp lane-change maneuvers when overtaking is required.
 
@@ -203,7 +203,7 @@ Third-party notices for PythonRobotics-derived components are listed in `THIRD_P
 ```bibtex
 @mastersthesis{master-thesis,
   author  = {Daniel Maksimovski},
-  title   = {{Behavior-Adaptive Motion Planning for Automated Driving}},
+  title   = {{Behavior Adaptive Motion Planning for Automated Driving}},
   school  = {Technische Hochschule Ingolstadt, Ingolstadt, Germany},
   type    = {Master's Thesis},
   year    = {2020}
