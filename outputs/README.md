@@ -2,14 +2,14 @@
 
 This folder is for local generated artifacts from scenario runs.
 
-Use it when you run experiments, regenerate plots, export GIFs, or create result tables that you do not necessarily want to commit. The files produced here are ignored by git, except this README.
+Use it when you run experiments, regenerate plots, export GIFs, or create result tables. Most generated files in this folder are local artifacts; only this README is tracked by default.
 
-The repository also contains `docs/figures/`. That folder has a different purpose: it stores curated figures and GIFs that are intentionally shown in the project README. In other words:
+The repository also contains `docs/figures/`. That folder has a different purpose: it stores the example media shown in the project README. In other words:
 
-- `docs/figures/`: checked-in, stable media used by documentation.
+- `docs/figures/`: stable media used by documentation.
 - `outputs/`: temporary or local media/results created while running scenarios.
 
-If you create a new figure or GIF that should become part of the README or documentation, first generate it in `outputs/`, inspect it, then copy or regenerate the final version into `docs/figures/` with a descriptive filename.
+If you create a new figure or GIF for the README or documentation, first generate it in `outputs/`, inspect it, then copy or regenerate the final version into `docs/figures/` with a descriptive filename.
 
 ## Examples
 
@@ -31,4 +31,4 @@ Save a scenario summary table:
 python scripts\scenario_summary.py --scenarios lane_change_1,lane_change_2,lane_change_3 --timeout 300 --csv outputs\scenario_summary.csv
 ```
 
-Generated images, GIFs, videos, and CSV files in this folder are intentionally ignored by git.
+Generated images, GIFs, videos, and CSV files in this folder are ignored by default.

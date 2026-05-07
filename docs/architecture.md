@@ -71,7 +71,7 @@ straight-line tracking.
 
 ## Outputs
 
-Use `outputs/` for local generated artifacts. Curated README media lives in `docs/figures/`.
+Use `outputs/` for local generated artifacts. Example README media lives in `docs/figures/`.
 
 Regenerate the README media with:
 

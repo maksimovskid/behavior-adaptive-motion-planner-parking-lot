@@ -1,6 +1,6 @@
 # Behavior-Adaptive Motion Planner for Parking Lots
 
-This repository contains the Python implementation used for Daniel Maksimovski's master's thesis, **Behavior Adaptive Motion Planning for Automated Driving**.
+This repository contains the Python implementation used for Daniel Maksimovski's master's thesis, **Behavior-Adaptive Motion Planning for Automated Driving**.
 
 The project simulates an automated vehicle driving through a structured parking lot. The ego vehicle plans a global path, adapts its speed around a lead vehicle, and performs local RRT Reeds-Shepp lane-change maneuvers when overtaking is required.
 
@@ -96,7 +96,7 @@ Save the live visualization as a GIF:
 python scripts\run_scenario.py lane_change_3 --timeout 300 --save-gif outputs\lane_change_3_dynamic_obstacle_live.gif
 ```
 
-Regenerate the curated README figures and GIFs:
+Regenerate the example figures and GIFs:
 
 ```powershell
 python scripts\generate_readme_media.py
@@ -108,13 +108,13 @@ Create a compact scenario result table:
 python scripts\scenario_summary.py --scenarios static_obstacle_avoidance,lane_change_1,lane_change_2,lane_change_3 --timeout 300
 ```
 
-`outputs/` is the recommended folder for local generated plots, GIFs, and CSV result tables. Curated images, GIFs, and videos that are shown in this README live in `docs/figures/` so they can be versioned with the documentation and kept visible on GitHub.
+`outputs/` is the recommended folder for local generated plots, GIFs, and CSV result tables. The example media shown below is stored in `docs/figures/`.
 
 The lane-change visualization shows the parking-lot layout, ego trajectory, obstacle or lead-vehicle trajectory, current vehicle poses, and the active RRT local path inside the same live frame.
 
 ## Visualizations
 
-The curated figures and GIFs below are intentionally stored in `docs/figures/` and should be committed with the repository. They make the GitHub page readable without requiring a user to run the scenarios first.
+The figures and GIFs below show representative outputs from the scenario runner.
 
 Lane-change with dynamic obstacle:
 
@@ -136,7 +136,7 @@ For details about what each scenario does and how to add new scenario variants, 
 
 ## Future Work
 
-Possible extensions include improving the lateral and longitudinal control layer, adding a more advanced trajectory smoother after local RRT planning, and extending the scenario set with richer obstacle behavior. The current controller is intentionally simple and thesis-compatible: it is sufficient for validating the behavior and motion planning pipeline, but a production-style automated-valet-parking stack would require deeper controller design and tuning.
+Possible extensions include improving the lateral and longitudinal control layer, adding a more advanced trajectory smoother after local RRT planning, and extending the scenario set with richer obstacle behavior. The current controller is deliberately simple and thesis-compatible: it is sufficient for validating the behavior and motion planning pipeline, but a production-style automated-valet-parking stack would require deeper controller design and tuning.
 
 ## Setup
 
