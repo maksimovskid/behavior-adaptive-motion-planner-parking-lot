@@ -118,19 +118,19 @@ The curated figures and GIFs below are intentionally stored in `docs/figures/` a
 
 Lane-change with dynamic obstacle:
 
-![Lane-change with dynamic obstacle](docs/figures/lane_change_3_dynamic_obstacle_live.gif)
+![Lane-change with dynamic obstacle](docs/figures/lane_change_3_dynamic_obstacle_live_no_grid.gif)
 
 Static environment live planning and tracking:
 
-![Static environment live planning and tracking](docs/figures/static_environment_live_planning_and_tracking.gif)
+![Static environment live planning and tracking](docs/figures/static_environment_live_planning_and_tracking_no_grid.gif)
 
 Static environment planned and tracked trajectory:
 
-![Static environment planned and tracked trajectory](docs/figures/static_environment_planned_and_tracked_trajectory.png)
+![Static environment planned and tracked trajectory](docs/figures/static_environment_planned_and_tracked_trajectory_no_grid.png)
 
 Lane-change velocity profiles:
 
-![Lane-change velocity profiles](docs/figures/lane_change_3_velocity_profiles.png)
+![Lane-change velocity profiles](docs/figures/lane_change_3_velocity_profiles_no_grid.png)
 
 For details about what each scenario does and how to add new scenario variants, see `docs/scenario_inventory.md`.
 
