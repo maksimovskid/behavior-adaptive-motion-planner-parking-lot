@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this thesis code, please cite the master's thesis."
-title: "Behavior-Adaptive Motion Planning for Automated Driving"
+title: "Behavior Adaptive Motion Planning for Automated Driving"
 authors:
   - family-names: "Maksimovski"
     given-names: "Daniel"
