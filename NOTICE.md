@@ -19,4 +19,6 @@ https://github.com/atsushisakai/pythonrobotics
 PythonRobotics is released under the MIT License. See `THIRD_PARTY_NOTICES.md`
 for the original third-party license notice.
 
-The thesis itself is not currently published online.
+The thesis text is available on ResearchGate:
+
+https://www.researchgate.net/publication/405001385_Behavior_Adaptive_Motion_Planning_for_Automated_Driving

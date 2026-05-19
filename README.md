@@ -203,11 +203,14 @@ Third-party notices for PythonRobotics-derived components are listed in `THIRD_P
 ```bibtex
 @mastersthesis{master-thesis,
   author  = {Daniel Maksimovski},
-  title   = {{Behavior Adaptive Motion Planning for Automated Driving}},
+  title   = {{Behavior-Adaptive Motion Planning for Automated Driving}},
   school  = {Technische Hochschule Ingolstadt, Ingolstadt, Germany},
   type    = {Master's Thesis},
-  year    = {2020}
+  year    = {2020},
+  url     = {https://www.researchgate.net/publication/405001385_Behavior_Adaptive_Motion_Planning_for_Automated_Driving}
 }
 ```
 
-The master's thesis is not currently published online.
+The master's thesis text is available on ResearchGate:
+
+https://www.researchgate.net/publication/405001385_Behavior_Adaptive_Motion_Planning_for_Automated_Driving

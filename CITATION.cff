@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this thesis code, please cite the master's thesis."
-title: "Behavior Adaptive Motion Planning for Automated Driving"
+title: "Behavior-Adaptive Motion Planning for Automated Driving"
 authors:
   - family-names: "Maksimovski"
     given-names: "Daniel"
@@ -8,3 +8,4 @@ type: thesis
 thesis-type: "Master's Thesis"
 institution: "Technische Hochschule Ingolstadt, Ingolstadt, Germany"
 year: 2020
+url: "https://www.researchgate.net/publication/405001385_Behavior_Adaptive_Motion_Planning_for_Automated_Driving"
