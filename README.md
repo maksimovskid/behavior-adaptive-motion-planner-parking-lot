@@ -118,10 +118,6 @@ The lane-change visualization shows the parking-lot layout, ego trajectory, obst
 
 The figures and GIFs below show representative outputs from the scenario runner.
 
-Lane-change with dynamic obstacle:
-
-![Lane-change with dynamic obstacle](docs/figures/lane_change_3_dynamic_obstacle_live_no_grid.gif)
-
 Static environment live planning and tracking:
 
 ![Static environment live planning and tracking](docs/figures/static_environment_live_planning_and_tracking_no_grid.gif)
@@ -129,6 +125,10 @@ Static environment live planning and tracking:
 Static environment planned and tracked trajectory:
 
 ![Static environment planned and tracked trajectory](docs/figures/static_environment_planned_and_tracked_trajectory_no_grid.png)
+
+Lane-change with dynamic obstacle:
+
+![Lane-change with dynamic obstacle](docs/figures/lane_change_3_dynamic_obstacle_live_no_grid.gif)
 
 Lane-change velocity profiles:
 
