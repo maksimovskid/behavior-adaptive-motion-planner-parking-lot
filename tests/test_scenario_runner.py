@@ -60,6 +60,7 @@ class ScenarioRegistryTests(unittest.TestCase):
                         "--timeout",
                         "300",
                         "--json",
+                        "--no-stop-after-goal",
                     ],
                     text=True,
                     stdout=subprocess.PIPE,

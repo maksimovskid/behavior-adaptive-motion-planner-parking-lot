@@ -14,7 +14,7 @@ def iter_python_files() -> list[Path]:
     files = []
     for path in REPO_ROOT.rglob("*.py"):
         relative = path.relative_to(REPO_ROOT)
-        if "__pycache__" in relative.parts:
+        if any(part in {"__pycache__", ".git", ".venv", "venv", "env", "outputs"} for part in relative.parts):
             continue
         files.append(path)
     return sorted(files)

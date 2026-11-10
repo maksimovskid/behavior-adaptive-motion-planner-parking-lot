@@ -5,7 +5,7 @@ This repository contains code developed for the master's thesis:
 ```bibtex
 @mastersthesis{my-master-thesis,
   author  = {Daniel Maksimovski},
-  title   = {{Behavior-Adaptive Motion Planning for Automated Driving}},
+  title   = {{Behavior Adaptive Motion Planning for Automated Driving}},
   school  = {Technische Hochschule Ingolstadt, Ingolstadt, Germany},
   type    = {Master's Thesis},
   year    = {2020}

@@ -1,6 +1,8 @@
 # Behavior-Adaptive Motion Planner for Parking Lots
 
-This repository contains the Python implementation used for Daniel Maksimovski's master's thesis, **Behavior-Adaptive Motion Planning for Automated Driving**.
+This repository contains a maintained research implementation associated with Daniel Maksimovski's master's thesis, **Behavior Adaptive Motion Planning for Automated Driving** (2020). It includes later restructuring, scenario changes, visualization updates, and controller tuning; it is not an exact snapshot of the 2020 experiments.
+
+Exact numerical reproduction of the original 2020 experiments is not claimed.
 
 The project simulates an automated vehicle driving through a structured parking lot. The ego vehicle plans a global path, adapts its speed around a lead vehicle, and performs local RRT Reeds-Shepp lane-change maneuvers when overtaking is required.
 
@@ -8,7 +10,7 @@ The project simulates an automated vehicle driving through a structured parking 
 
 The thesis presents a behavior and motion planner for automated valet parking, a use case considered promising for early autonomous-driving deployment because parking lots are low-speed, closed, and known environments. The simulated vehicle drives from a starting configuration to an assigned goal configuration while considering static and dynamic obstacles. The final parking maneuver into the bay is not modeled.
 
-The planning approach is based on path-velocity decomposition. Hybrid A* plans global paths through both lanes of the parking lot. A finite-state behavior planner uses distance and velocity metrics to decide whether the ego vehicle should follow the lane, adapt speed behind a lead vehicle, change lanes, or return to the original lane. The velocity planner generates trapezoidal speed profiles, while the local planner uses RRT Reeds-Shepp paths for obstacle-avoidance maneuvers. A decoupled longitudinal and lateral controller tracks the resulting trajectory.
+The planning approach is based on path-velocity decomposition. Hybrid A* plans global paths through both lanes of the parking lot. A finite-state behavior planner uses distance and velocity metrics to select local lane-change and return paths. The speed profiles and saturated longitudinal controller produce approximately trapezoidal speed histories; the current velocity helpers do not enforce a curvature-based lateral acceleration limit. The local RRT Reeds-Shepp implementation uses goal-only sampling by default to preserve the documented scenario behavior. A decoupled longitudinal and lateral controller tracks the resulting reference.
 
 The main objective of the work is motion planning with behavior planning and trajectory planning, where the trajectory is decomposed into path planning and velocity planning. The controller is included to validate the planned trajectories in closed-loop simulation. Its rear-wheel feedback gains have been tuned for smoother tracking in the cleaned repository, but control design is not the main research focus and remains a natural area for future improvement.
 
@@ -137,6 +139,16 @@ For details about what each scenario does and how to add new scenario variants, 
 ## Future Work
 
 Possible extensions include improving the lateral and longitudinal control layer, adding a more advanced trajectory smoother after local RRT planning, and extending the scenario set with richer obstacle behavior. The current controller is deliberately simple and thesis-compatible: it is sufficient for validating the behavior and motion planning pipeline, but a production-style automated-valet-parking stack would require deeper controller design and tuning.
+
+## Scope And Limitations
+
+The documented scenarios demonstrate a research planning pipeline in a known parking lot with a kinematic bicycle model and prescribed obstacle behavior. They do not model perception or localization uncertainty, V2X communication, or the final parking-bay maneuver. Goal completion uses a position tolerance and does not require a full stop or final heading tolerance.
+
+Collision checks use sampled paths and discrete obstacle points. They do not establish continuous footprint clearance: an independent footprint check found a small central-island corner overlap in `lane_change_2` that the discrete obstacle model misses. Local-path smoothing is not followed by a full footprint collision check, and moving lead vehicles are not inserted into the RRT obstacle set. These scenarios are demonstrations, not a general collision-avoidance or production safety guarantee.
+
+See [the archival audit](docs/archival_readiness_audit.md) for current verification evidence, limitations, and the distinction between thesis concepts and later repository changes.
+
+The later [PriMa Python](https://github.com/maksimovskid/priority-maneuver-coordination) and [Artery maneuver-coordination](https://github.com/maksimovskid/artery-maneuver-coordination) repositories are separate research systems and are not included in this implementation.
 
 ## Setup
 

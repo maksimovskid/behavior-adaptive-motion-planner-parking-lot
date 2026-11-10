@@ -1,6 +1,7 @@
 # Scenario Audit
 
-Latest scenario smoke-check baseline.
+Historical scenario smoke-check baseline. See `archival_readiness_audit.md` for
+the 2026-11-10 audit, including independent footprint checks and current results.
 
 Date: 2026-05-06
 

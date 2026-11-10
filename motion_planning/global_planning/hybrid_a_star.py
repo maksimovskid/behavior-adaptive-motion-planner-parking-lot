@@ -312,12 +312,21 @@ def hybrid_a_star_planning(start, goal, ox, oy, xyreso, yawreso):
     yawreso: yaw angle resolution [rad]
     """
 
+    if (len(start) != 3 or len(goal) != 3 or len(ox) != len(oy)
+            or not len(ox) or not np.isfinite([*start, *goal, *ox, *oy, xyreso, yawreso]).all()
+            or xyreso <= 0 or yawreso <= 0):
+        raise ValueError("Hybrid A* requires finite poses, a nonempty obstacle map, and positive resolutions")
     start[2], goal[2] = rs.pi_2_pi(start[2]), rs.pi_2_pi(goal[2])
     tox, toy = ox[:], oy[:]
 
     obkdtree = KDTree(np.vstack((tox, toy)).T)
 
     config = Config(tox, toy, xyreso, yawreso)
+
+    for pose in (start, goal):
+        if (not min(ox) <= pose[0] <= max(ox) or not min(oy) <= pose[1] <= max(oy)
+                or not check_car_collision([pose[0]], [pose[1]], [pose[2]], ox, oy, obkdtree)):
+            raise ValueError("Hybrid A* start or goal is outside the map or in collision")
 
     nstart = Node(round(start[0] / xyreso), round(start[1] / xyreso), round(start[2] / yawreso),
                   True, [start[0]], [start[1]], [start[2]], [True], cost=0)
@@ -337,7 +346,7 @@ def hybrid_a_star_planning(start, goal, ox, oy, xyreso, yawreso):
     while True:
         if not openList:
             print("Error: Cannot find path, No open set")
-            return [], [], []
+            return None
 
         cost, c_id = heapq.heappop(pq)
         if c_id in openList:

@@ -30,6 +30,8 @@ def debug_log(*args):
 
 def smooth_rrt_path(rrt_path: Sequence[Sequence[float]]):
     """Return RRT path arrays with spline-consistent yaw and curvature."""
+    if rrt_path is None or len(rrt_path) < 2:
+        raise RuntimeError("RRT could not produce a usable local path")
     raw_x = np.array([state[0] for state in rrt_path])[::-1]
     raw_y = np.array([state[1] for state in rrt_path])[::-1]
     raw_yaw = np.array([state[2] for state in rrt_path])[::-1]
@@ -43,7 +45,7 @@ def smooth_rrt_path(rrt_path: Sequence[Sequence[float]]):
     rrt_y = np.array(rrt_y)
 
     if len(rrt_x) < 2:
-        return rrt_x, rrt_y, raw_yaw, [0.0] * len(rrt_x)
+        raise RuntimeError("RRT local path contains no distinct positions")
 
     if len(rrt_x) >= 4:
         spline_x, spline_y, spline_yaw, spline_k, _ = calc_spline_course(rrt_x.tolist(), rrt_y.tolist(), ds=0.2)
@@ -354,7 +356,7 @@ class BehaviouralLocalPlanner:
         debug_log('start of rrt: ', start_rrt)
         target_ind2, mind = calc_nearest_index(state, cx_2, cy_2,
                                                cyaw_2)  # curretn index and distance to index on the other lane planned path
-        target_ind_distance = target_ind2 + self.config.rrt_target_index_offset
+        target_ind_distance = min(target_ind2 + self.config.rrt_target_index_offset, len(cx_2) - 1)
         debug_log('current target index on the left lane: ', target_ind2)
         goal_rrt = [cx_2[target_ind_distance], cy_2[target_ind_distance],
                     cyaw_2[target_ind_distance]]
@@ -378,7 +380,7 @@ class BehaviouralLocalPlanner:
         target_ind2, mind = calc_nearest_index(state, cx, cy,
                                                cyaw)  # current index on the original right lane planned path
         target_offset = self.config.rrt_return_target_index_offset or self.config.rrt_target_index_offset
-        target_ind_distance = target_ind2 + target_offset
+        target_ind_distance = min(target_ind2 + target_offset, len(cx) - 1)
         goal_rrt2 = [cx[target_ind_distance], cy[target_ind_distance],
                      cyaw[target_ind_distance]]
         debug_log('goal of rrt_2: ', goal_rrt2)

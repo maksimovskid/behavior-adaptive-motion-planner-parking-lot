@@ -60,7 +60,7 @@ class RRTReedsShepp(RRT):
             self.path_yaw = []
 
     def __init__(self, start, goal, obstacle_list, rand_area,
-                 goal_sample_rate=10,
+                 goal_sample_rate=100,
                  max_iter=10,
                  ):
         """
@@ -160,7 +160,7 @@ class RRTReedsShepp(RRT):
             from_node.x, from_node.y, from_node.yaw,
             to_node.x, to_node.y, to_node.yaw, self.curvature)
 
-        if len(px) <= 0.1:  # cannot find a dubins path
+        if px is None or len(px) < 2:
             return None
 
       
@@ -189,9 +189,9 @@ class RRTReedsShepp(RRT):
 
 
     def get_random_node(self):
-        """Sample a random pose, occasionally biasing toward the goal pose."""
+        """Sample a pose; default to the historical goal-only scenario behavior."""
 
-        if random.randint(0, 1) > self.goal_sample_rate:
+        if random.randint(0, 100) > self.goal_sample_rate:
             rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
                             random.uniform(self.min_rand, self.max_rand),
                             random.uniform(-math.pi/4, math.pi/4)   #changed angle from pi to  pi/4

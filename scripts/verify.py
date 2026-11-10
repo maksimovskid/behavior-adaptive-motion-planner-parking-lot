@@ -20,6 +20,8 @@ def main() -> int:
     """Run each verification command and stop on the first failure."""
     for command in COMMANDS:
         print(f"\n> {' '.join(command)}", flush=True)
+        if "scripts/run_scenario.py" in command:
+            command = [*command, "--no-stop-after-goal"]
         completed = subprocess.run(command)
         if completed.returncode != 0:
             return completed.returncode

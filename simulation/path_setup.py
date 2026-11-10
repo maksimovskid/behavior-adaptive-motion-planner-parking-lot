@@ -40,6 +40,8 @@ def prepare_hybrid_path(
         path = hybrid_a_star.hybrid_a_star_planning(start, goal, ox, oy, xy_grid_resolution, yaw_grid_resolution)
     finally:
         hybrid_a_star.show_animation = previous_animation
+    if not hasattr(path, "xlist") or len(path.xlist) < 2:
+        raise RuntimeError("Hybrid A* could not produce a usable path")
     x = path.xlist
     y = path.ylist
     yaw = path.yawlist
