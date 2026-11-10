@@ -125,7 +125,7 @@ Static environment live planning and tracking:
 Static environment planned and tracked trajectory:
 
 <p align="center">
-  <img src="docs/figures/static_environment_planned_and_tracked_trajectory_no_grid.png" alt="Static environment planned and tracked trajectory" width="650">
+  <img src="docs/figures/static_environment_planned_and_tracked_trajectory_no_grid.png" alt="Static environment planned and tracked trajectory" width="500">
 </p>
 
 Lane-change with dynamic obstacle:
@@ -135,7 +135,7 @@ Lane-change with dynamic obstacle:
 Lane-change velocity profiles:
 
 <p align="center">
-  <img src="docs/figures/lane_change_3_velocity_profiles_no_grid.png" alt="Lane-change velocity profiles" width="650">
+  <img src="docs/figures/lane_change_3_velocity_profiles_no_grid.png" alt="Lane-change velocity profiles" width="500">
 </p>
 
 For details about what each scenario does and how to add new scenario variants, see `docs/scenario_inventory.md`.
