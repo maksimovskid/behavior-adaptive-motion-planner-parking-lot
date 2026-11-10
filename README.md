@@ -120,19 +120,27 @@ The figures and GIFs below show representative outputs from the scenario runner.
 
 Static environment live planning and tracking:
 
-![Static environment live planning and tracking](docs/figures/static_environment_live_planning_and_tracking_no_grid.gif)
+<p align="center">
+  <img src="docs/figures/static_environment_live_planning_and_tracking_no_grid.gif" alt="Static environment live planning and tracking" width="650">
+</p>
 
 Static environment planned and tracked trajectory:
 
-![Static environment planned and tracked trajectory](docs/figures/static_environment_planned_and_tracked_trajectory_no_grid.png)
+<p align="center">
+  <img src="docs/figures/static_environment_planned_and_tracked_trajectory_no_grid.png" alt="Static environment planned and tracked trajectory" width="700">
+</p>
 
 Lane-change with dynamic obstacle:
 
-![Lane-change with dynamic obstacle](docs/figures/lane_change_3_dynamic_obstacle_live_no_grid.gif)
+<p align="center">
+  <img src="docs/figures/lane_change_3_dynamic_obstacle_live_no_grid.gif" alt="Lane-change with dynamic obstacle" width="650">
+</p>
 
 Lane-change velocity profiles:
 
-![Lane-change velocity profiles](docs/figures/lane_change_3_velocity_profiles_no_grid.png)
+<p align="center">
+  <img src="docs/figures/lane_change_3_velocity_profiles_no_grid.png" alt="Lane-change velocity profiles" width="700">
+</p>
 
 For details about what each scenario does and how to add new scenario variants, see `docs/scenario_inventory.md`.
 
